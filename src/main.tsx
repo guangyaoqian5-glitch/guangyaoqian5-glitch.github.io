@@ -35,7 +35,7 @@ function PortfolioRouter(){
  useEffect(()=>{const update=()=>setHash(window.location.hash);window.addEventListener('hashchange',update);return()=>window.removeEventListener('hashchange',update);},[]);
  const parts=hash.slice(1).split('/');
  const project=parts[1]==='project'?projects.find(p=>p.id===parts[2]):undefined;
- useEffect(()=>{if(!project){document.title='钱光耀 — 设计作品集';requestAnimationFrame(()=>{const el=document.getElementById(hash.slice(1));if(el)el.scrollIntoView({behavior:'instant'});else window.scrollTo({top:0,behavior:'instant'});});}},[hash,project]);
+ useEffect(()=>{if(!project){document.title='Qian Guangyao — Portfolio';requestAnimationFrame(()=>{const el=document.getElementById(hash.slice(1));if(el)el.scrollIntoView({behavior:'instant'});else window.scrollTo({top:0,behavior:'instant'});});}},[hash,project]);
  if(project)return <CaseStudy key={project.id} project={project} chapterId={parts[3]}/>;
  if(parts[1]==='project')return <main className="wrap section"><h1>未找到这个项目</h1><a href="#work">返回作品分类</a></main>;
  return <App/>;

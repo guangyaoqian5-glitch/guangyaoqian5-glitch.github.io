@@ -26,7 +26,7 @@ export function CaseStudy({project:p,chapterId}:{project:Project;chapterId?:stri
  const [active,setActive]=useState(p.chapters[0].id);const [lightbox,setLightbox]=useState<number|string|null>(null);const [zoom,setZoom]=useState(1);const modal=useRef<HTMLDialogElement>(null);const heading=useRef<HTMLHeadingElement>(null);
  const category=categories.find(c=>c.id===p.category)!;
  const next=projects[(projects.findIndex(q=>q.id===p.id)+1)%projects.length];
- useEffect(()=>{document.title=p.title+' — 钱光耀作品集'; if(!chapterId){window.scrollTo({top:0,behavior:'instant'});heading.current?.focus({preventScroll:true});}return()=>{document.title='钱光耀 — 设计作品集';};},[p.id]);
+ useEffect(()=>{document.title=p.title+' — Qian Guangyao Portfolio'; if(!chapterId){window.scrollTo({top:0,behavior:'instant'});heading.current?.focus({preventScroll:true});}return()=>{document.title='Qian Guangyao — Portfolio';};},[p.id]);
  useEffect(()=>{if(chapterId)document.getElementById('chapter-'+chapterId)?.scrollIntoView({behavior:'instant',block:'start'});else window.scrollTo({top:0,behavior:'instant'});},[chapterId,p.id]);
  useEffect(()=>{const update=()=>{const line=window.innerHeight*.3;let current=p.chapters[0].id;for(const chapter of p.chapters){const el=document.getElementById('chapter-'+chapter.id);if(el&&el.getBoundingClientRect().top<=line)current=chapter.id;}setActive(current);};window.addEventListener('scroll',update,{passive:true});update();return()=>window.removeEventListener('scroll',update);},[p.id]);
  useEffect(()=>{if(lightbox!==null){setZoom(1);modal.current?.showModal();document.body.style.overflow='hidden';}else{modal.current?.close();document.body.style.overflow='';}return()=>{document.body.style.overflow='';};},[lightbox]);
