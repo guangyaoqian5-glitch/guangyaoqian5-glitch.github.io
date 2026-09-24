@@ -1,0 +1,9 @@
+import {useState} from 'react';
+import {experience,reflections} from './experience-data';
+export function ExperiencePanel({id,mode="all"}:{id:string;mode?:"all"|"scenarios"|"validation"}){
+ const data=experience[id];const [step,setStep]=useState(0);if(!data)return null;
+ const current=data.stages[step];
+ return <div className="experience-panel">{mode!=="validation"&&<p className="evidence-note">{data.basis}</p>}{mode!=="validation"&&<><div className="journey-tabs" role="tablist" aria-label="体验阶段">{data.stages.map((stage,i)=><button type="button" role="tab" id={'journey-tab-'+i} tabIndex={step===i?0:-1} onKeyDown={event=>{if(['ArrowRight','ArrowLeft','Home','End'].includes(event.key)){event.preventDefault();const next=event.key==='Home'?0:event.key==='End'?2:(i+(event.key==='ArrowRight'?1:2))%3;setStep(next);(event.currentTarget.parentElement?.children[next] as HTMLButtonElement)?.focus();}}} aria-selected={step===i} aria-controls="journey-panel" key={stage[0]} onClick={()=>setStep(i)}><span>0{i+1}</span>{stage[0]}<span>↗</span></button>)}</div><div className="journey-detail" id="journey-panel" role="tabpanel" aria-labelledby={'journey-tab-'+step}><span className="journey-big">0{step+1}</span><div><span className="eyebrow">场景与体验问题</span><h3>{current[1]}</h3><p>{current[2]}</p></div></div>{data.interviews&&<div className="interview-plan"><div className="editorial-heading"><h3>回到真实经历中追问</h3><span>访谈提纲 · 待实施</span></div>{data.interviews.map(([who,q],i)=><div className="interview-row" key={who}><span>0{i+1}</span><strong>{who}</strong><p>{q}</p></div>)}</div>}</>}{mode!=="scenarios"&&<ReflectionPanel id={id}/>}</div>
+}
+
+export function ReflectionPanel({id}:{id:string}){const reflection=reflections[id];if(!reflection)return null;return <div className="project-reflection"><span className="eyebrow">PROJECT REFLECTION</span><h3>{reflection[0]}</h3><p>{reflection[1]}</p></div>;}
