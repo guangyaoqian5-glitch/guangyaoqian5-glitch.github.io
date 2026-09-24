@@ -7,9 +7,9 @@ export const sources:Record<Source,{name:string;count:number}>={interior:{name:'
 const range=(a:number,b:number)=>Array.from({length:b-a+1},(_,i)=>a+i);
 const c=(id:string,title:string,lead:string,body:string[],pages:number[]):Chapter=>({id,title,lead,body,pages});
 export const categories=[
- {id:'interior',title:'室内与空间设计',en:'INTERIOR & SPATIAL DESIGN',intro:'从场地、光线与动线出发，重新组织空间中的日常。'},
  {id:'service',title:'服务设计',en:'SERVICE DESIGN',intro:'沿着人的真实旅程，连接数字触点、实体空间与服务关系。'},
- {id:'interaction',title:'概念交互设计',en:'CONCEPT & INTERACTION',intro:'用装置、游戏和感官体验，让不易察觉的问题被感知。'}
+ {id:'interaction',title:'概念交互设计',en:'CONCEPT & INTERACTION',intro:'用装置、游戏和感官体验，让不易察觉的问题被感知。'},
+ {id:'interior',title:'室内与空间设计',en:'INTERIOR & SPATIAL DESIGN',intro:'从场地、光线与动线出发，重新组织空间中的日常。'}
 ] as const;
 export const projects:Project[]=[
  {id:'collective-box',title:'集盒办公改造',en:'Collective Box',category:'interior',subtitle:'艺术学院办公空间更新',description:'把封闭的办公走廊，改造为拥有自然采光、作品展示和交流空间的日常场所。',source:'interior',cover:'/projects/covers/collective-box.jpg',tags:['办公空间','空间改造','动线设计'],context:'大学课程设计 · 办公区改造',chapters:[
@@ -82,6 +82,7 @@ export const projects:Project[]=[
 
 ];
 const researchAfter:Record<string,string>={'collective-box':'research','shiguangli':'brief','lingzhou':'research','overlapping':'research','grease-grace':'research','ealing':'pain','floating-island':'insight','invisible-smoke':'research','fingertip-track':'concept','bird-vision':'pain'};
+projects.sort((a,b)=>categories.findIndex(category=>category.id===a.category)-categories.findIndex(category=>category.id===b.category));
 for(const project of projects){
  const evidence=research[project.id];
  let insertion=project.chapters.findIndex(ch=>ch.id===researchAfter[project.id])+1;

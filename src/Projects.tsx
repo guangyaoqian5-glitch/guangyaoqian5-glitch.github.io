@@ -13,7 +13,7 @@ function Cover({project:p}:{project:Project}){return <><img src={p.cover} alt={p
 const totalPages=(p:Project)=>p.chapters.reduce((n,c)=>n+c.pages.length,0);
 export function ProjectArchive(){return <section className="archive section wrap" id="work">
  <div className="section-top"><span className="eyebrow">01 / PROJECT ARCHIVE</span><span className="muted">10 个项目 · 3 个设计方向</span></div>
- <div className="archive-intro"><h2>沿着不同的路径，<br/><span className="dim">理解人与世界。</span></h2><p>室内与空间 / 服务 / 概念交互<br/>钱光耀 · 项目作品档案</p></div>
+ <div className="archive-intro"><h2>沿着不同的路径，<br/><span className="dim">理解人与世界。</span></h2><p>服务 / 概念交互 / 室内与空间<br/>钱光耀 · 项目作品档案</p></div>
  <nav className="category-jumps" aria-label="作品分类">{categories.map((cat,i)=><a href={'#work-'+cat.id} key={cat.id}><span>0{i+1}</span>{cat.title}<ArrowUpRight size={17}/></a>)}</nav>
  {categories.map((cat,i)=><section className="category-group" id={'work-'+cat.id} key={cat.id} aria-labelledby={'title-'+cat.id}>
   <div className="category-heading"><span className="category-index">0{i+1}</span><div><span className="eyebrow">{cat.en}</span><h3 id={'title-'+cat.id}>{cat.title}</h3></div><p>{cat.intro}</p><span className="category-count">({projects.filter(p=>p.category===cat.id&&!p.supplement).length.toString().padStart(2,'0')})</span></div>
