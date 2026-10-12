@@ -4,3 +4,4 @@ dist/
 .openai/
 .env*
 *.tsbuildinfo
+.deploy-known-hosts
