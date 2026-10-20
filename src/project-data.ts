@@ -1,9 +1,9 @@
 import {research} from './research-data';
 import {experience} from './experience-data';
-export type Source = 'interior' | 'portfolio' | 'ealing' | 'future';
+export type Source = 'interior' | 'portfolio' | 'ealing' | 'future' | 'smoke';
 export type Chapter = {id:string;title:string;lead:string;body:string[];pages:number[]};
 export type Project = {id:string;title:string;en:string;category:'interior'|'service'|'interaction';subtitle:string;description:string;source:Source;cover:string;tags:string[];context:string;credits?:string;note?:string;chapters:Chapter[];supplement?:boolean};
-export const sources:Record<Source,{name:string;count:number}>={interior:{name:'室内.pptx',count:21},portfolio:{name:'钱光耀作品集(1).pdf',count:22},ealing:{name:'Ealing.pdf',count:35},future:{name:'SU7.pdf',count:31}};
+export const sources:Record<Source,{name:string;count:number}>={interior:{name:'室内.pptx',count:21},portfolio:{name:'钱光耀作品集(1).pdf',count:22},ealing:{name:'Ealing.pdf',count:35},future:{name:'SU7.pdf',count:31},smoke:{name:'烟雾项目独立页面（已排除 5 张参考图）',count:15}};
 const range=(a:number,b:number)=>Array.from({length:b-a+1},(_,i)=>a+i);
 const c=(id:string,title:string,lead:string,body:string[],pages:number[]):Chapter=>({id,title,lead,body,pages});
 export const categories=[
@@ -61,12 +61,22 @@ export const projects:Project[]=[
  c('insight','用户访谈与设计机会','把海钓、住宿和餐饮作为相互关联的服务。',['访谈材料涵盖海钓休闲人员、住宿旅客及休闲餐饮需求。用户希望获得更安全舒适的海钓环境、便利的预订、可控制的客房设施及新鲜餐饮。','设计机会包括海钓服务选择、酒店预订与设备控制，以及将捕获处理和餐饮体验连接起来。'],[9]),
  c('space','线下空间设计','利用模块化空间组织海上停留体验。',["访谈中的装备、住宿与餐饮需求，先转化为空间位置和人员交接，再进入数字入口。下面的线下方案回答“服务在哪里发生”，下一章界面回答“如何找到、预订和发起请求”；天气中断等缺口在末尾反思中说明。",'通过平台模型、生成过程、功能区域及人流关系，将海钓、住宿、餐饮、休闲和能源相关设施纳入整体方案。','原稿效果图进一步呈现平台外部、休闲区域与客房环境。'],range(10,11)),
  c('digital','线上服务与界面','用一个入口连接预订、信息与设备控制。',['线上设计包含信息架构及移动端界面，围绕海上停留所需的房间、服务信息与控制功能展开，形成线下场景的数字延伸。'],[12])]},
- {id:'invisible-smoke',title:'看不见的烟雾',en:'Invisible Smoke',category:'interaction',subtitle:'日常生活中隐藏的烟雾',description:'通过传感器、粒子影像与实体天平，把日常污染行为转化为可感知的反馈。',source:'portfolio',cover:'/projects/covers/invisible-smoke.jpg',tags:['交互装置','TouchDesigner','Arduino'],context:'环境议题 · 交互装置与视觉实验',chapters:[
- c('brief','选题与项目命题','看见日常行为背后被忽略的环境影响。',['项目关注日常低碳行为背后的动机与矛盾，希望通过互动和可视化使观众反思自身行为与环境之间的关系。'],[1]),
- c('research','背景、问卷与现场调研','从态度问卷走向具体的污染情境。',['原稿结合问卷、人物访谈、现场调查及 SWOT，关注公众对环保行为的态度，以及夜市、寺庙等日常场景中的烟雾。','调研材料保留在下方原稿中。部分问卷未提供完整的样本和方法说明，因此这里不将百分比扩展为总体人群结论。'],range(2,3)),
- c('concept','概念、数据与视觉实验','把不可见的变化，变成可以观察的粒子运动。',["调研确立了日常污染议题，装置选择把行为与反馈连接起来。需要分别阅读环境数据、视觉转译和交互反馈：粒子数量与天平倾斜属于表达机制，未经标定不能直接视作污染浓度的测量结果。",'以夜市与寺庙作为模拟场景，将烟雾轮廓提取、几何化并转化为粒子视觉；污染变化与实体天平关联，形成可见的失衡反馈。','原稿包含污染物随时间变化的图表和视觉实验过程，展示从现场图像到动态表达的转译。'],[4]),
- c('prototype','交互机制与装置实现','传感器、屏幕与物理反馈共同构成体验。',['方案结合 TouchDesigner、Arduino 与三维场景，使用超声波、热成像及气体相关传感器等组件连接观众行为与屏幕变化。','两个屏幕分别呈现寺庙与夜市场景，通过伺服机构驱动天平倾斜；视觉海报与粒子语言延续同一主题。'],[5]),
- c('outcome','装置展示与视觉输出','将研究、交互与视觉设计汇集到同一个展览现场。',['原稿以装置照片、参与者操作及海报展示最终输出，呈现屏幕、硬件和实体反馈之间的关系。'],[6])]},
+ {id:'invisible-smoke',title:'看不见的烟雾',en:'Invisible Clouds',category:'interaction',subtitle:'从可见烟雾到环境信息理解',description:'通过现场互动、纸质记录与访客网页，把日常烟雾从可见现象转化为可解释、可回看的环境信息体验。',source:'smoke',cover:'/projects/invisible-smoke-v2/page-01.webp',tags:['UX Research','交互装置','TouchDesigner · Arduino'],context:'个人项目 · 环境议题 · 实体装置与数字触点',note:'本项目使用“烟雾”文件夹中的 15 张正式页面，已排除“参考一”至“参考五”。问卷百分比仅代表原项目样本；文献数值与原型信号均保留各自来源和证据边界；P.15 为测试计划，结果尚未填写。',chapters:[
+ c('cover','项目命题','看得见的烟雾，不等于理解污染。',['项目从寺庙焚香与夜市烧烤两类日常情境出发，探索如何通过身体互动与信息解释，让观众理解可见烟雾背后的污染组成与环境影响。'],[1]),
+ c('overview','项目概览','从现场互动，到离场后的理解。',['体验由四个连续触点构成：现场参与、纸质记录、访客网页与离场回看。装置把观众的动作转化为屏幕粒子与机械天平反馈，纸条和网页承担解释与持续访问。'],[2]),
+ c('context','项目情境','从日常污染情境到交互理解任务。',['研究选择寺庙焚香与夜市烧烤两类可见烟雾场景，并将观众任务拆为发现互动、理解反馈、追溯信息来源。低门槛进入、表达与测量的区分、现场信息容量和离场后访问共同形成设计约束。'],[3]),
+ c('research-design','研究设计','从环保行为到污染感知。',['研究围绕行为动机、态度与意愿、污染来源三个问题展开，组合问卷调查、桌面研究、环境数据采集和现场影像记录四种方法。研究范围包括用户侧环保行为，以及寺庙焚香、夜市烧烤等七类日常污染源。'],[4]),
+ c('research-execution','研究执行','从行为调查到环境证据的收集。',['原项目问卷记录环保行为的社会影响、行为动机、环境态度与持续践行原因；环境侧通过文献、传感器与 Arduino 原型、现场摄影建立证据索引。所有百分比均按原页面呈现，不外推为总体结论。'],[5]),
+ c('data-analysis','数据分析','从行为数据到环境信息。',['分析比较一般参与动机与持续践行原因，并将问卷态度、污染排放文献和空气质量参考分开呈现。原型传感器用于探索信息呈现方式，其数值不代表经过标定的真实环境浓度。'],[6]),
+ c('insights','核心研究洞察','从研究证据到体验问题。',['三项洞察分别指向个人利益与健康、态度和行动之间的距离，以及“看见烟雾”与“理解污染”之间的认知断层；原型反思进一步指出，一次互动不足以承担完整解释。'],[7]),
+ c('opportunities','设计机会','从研究洞察到设计问题。',['项目将洞察转化为三条 How Might We：建立日常行为与空气污染的联系；让抽象信息可理解且可离场查阅；用身体参与和即时反馈连接动作与环境信息。'],[8]),
+ c('exploration','方案探索','从多种可能到最终方向。',['方案从场景、视觉表达、交互感应与反馈形式四个维度探索，最终选择寺庙焚香与夜市烧烤双场景、点云烟雾、超声波与热成像双感应，以及屏幕粒子、机械天平、纸质记录三类反馈。'],[9]),
+ c('ecosystem','体验系统','从即时互动到连续体验。',['现场装置负责感知与参与，纸质记录提供编号和后续入口，访客网页解释情境、反馈、污染物和资料来源，离场回看使一次短暂互动转化为可持续的信息理解。'],[10]),
+ c('installation','装置原型','从概念到实体装置。',['原型由双屏、机械天平、热敏打印机与展墙海报组成。寺庙场景以超声波感知距离并驱动点云扩散；夜市场景以热成像识别进入画面，触发烟雾粒子互动；两种场景共用机械天平作为实体反馈。'],[11]),
+ c('technology','交互流程与技术实现','从观众动作到系统响应。',['Arduino 连接输入传感器与舵机，TouchDesigner 生成实时画面。交互链路依次为观众动作、感应、处理、系统响应；环境数据原型另以五类气体传感器探索数据显示，页面已明确其为原型级数据。'],[12]),
+ c('visitor-web','访客网页','从一张纸条到可回看的信息。',['访客可用纸条编号或二维码进入记录，在情境、反馈、污染物、资料来源四层信息中逐步理解，并在“我的记录”中再次访问。该网页为设计提案，尚未开发上线和完成可用性测试。'],[13]),
+ c('visual-system','视觉规范','从烟雾形态到视觉系统。',['黑、灰、纸白构成基础色，寺庙使用暖褐，夜市使用青绿。现场烟雾经几何化与轮廓提取形成海报图形，再打散为屏幕粒子；污染物化学式同时出现在屏幕与纸质记录中。'],[14]),
+ c('testing','测试计划与证据边界','从原型到验证：计划已经定义，结果尚待填写。',['原页面计划邀请 5 位未接触项目的成年人完成 5 个任务，以出声思维、任务观察和 5 分钟访谈检验启动、反馈理解、网页查找与离场回看。当前没有完成情况、原话、问题清单或迭代前后截图，因此网站只展示测试计划，不编造结果。'],[15])]},
  {id:'fingertip-track',title:'指尖轨迹',en:'Fingertip Track',category:'interaction',subtitle:'理解老年人数字使用困难的体验游戏',description:'让玩家进入老年人的日常任务，在交互过程中理解数字鸿沟与情感处境。',source:'portfolio',cover:'/projects/covers/fingertip-track.jpg',tags:['体验游戏','适老议题','Unity 原型'],context:'数字包容 · 游戏交互与原型测试',chapters:[
  c('brief','选题与体验目标','通过游戏理解数字孤立中的日常困难。',['项目从老年人在快速发展的数字环境中面临的社会融入问题出发，尝试让参与者以老年人的视角理解技术使用障碍。'],[13]),
  c('research','背景研究与人物访谈','问题不仅是不会使用设备，也涉及心理和社会联系。',['原稿整理不同年龄群体的数字产品使用情况，并通过老年使用者、互动设计师和心理学相关访谈讨论技术复杂性、学习负担与社会隔离。','这里保留原研究材料，不额外推定样本规模或已经取得的社会影响。'],[14]),
@@ -84,6 +94,7 @@ export const projects:Project[]=[
 const researchAfter:Record<string,string>={'collective-box':'research','shiguangli':'brief','lingzhou':'research','overlapping':'research','grease-grace':'research','ealing':'pain','floating-island':'insight','invisible-smoke':'research','fingertip-track':'concept','bird-vision':'pain'};
 projects.sort((a,b)=>categories.findIndex(category=>category.id===a.category)-categories.findIndex(category=>category.id===b.category));
 for(const project of projects){
+ if(project.id==='invisible-smoke')continue;
  const evidence=research[project.id];
  let insertion=project.chapters.findIndex(ch=>ch.id===researchAfter[project.id])+1;
  if(evidence){project.chapters.splice(insertion,0,c('evidence','研究依据与设计分析',evidence.question,[],[]));insertion++;}
@@ -94,5 +105,6 @@ export const pageTitles:Record<Source,string[]>={
  interior:['作品集封面','前言与目录','集盒办公改造 · 项目封面','原始平面、痛点与设计切入点','设计思路与空间生成','优化平面与功能分区','空间效果与观察点','拾光里 · 酒店定位','设计理念与平面方案','彩平、流线、软装与材料','餐厅与大堂效果','玄武菱洲艺术馆 · 设计概念','区位、人群与历史分析','设计思路、展陈与剖立面','平面与效果图','重叠构造 · 概念与历史','区位与现状分析','体块生成、爆炸图与展厅','总平面与剖面','建筑及户外场景','空间效果与绘画习作'],
  portfolio:['看不见的烟雾 · 项目封面','项目背景、问卷与污染调研','人物访谈、场地调研与 SWOT','概念、数据分析与视觉实验','互动概念、编程、场景与视觉设计','装置展示与视觉输出','浮岛 · 项目封面','现地研究、光照与现有服务','访谈、构思与设计原则','空间设计与功能组织','离线空间效果','在线服务与信息架构','指尖轨迹 · 项目封面','背景、数据与人物采访','调查问卷、工作坊与故事板','游戏素材与代码','游戏流程、测试与反馈','你能看到我看到的吗 · 项目封面','背景、场地与问卷','访谈、问题树与洞察','设计策略、过程与故事板','最终展示、在线设计与展望'],
  ealing:["项目封面", "项目目标", "Liu 家庭画像", "搬迁旅程", "旅程聚焦", "案头研究范围", "住房挑战", "公共支持资源", "一手研究", "访谈对象与关注点", "共情图", "利益相关者地图", "用户旅程", "访谈洞察汇总", "问题陈述", "问题定义", "方案引入", "现有流程", "整体服务架构", "安居支持中心", "用户流程", "入学旅程", "家长必备信息", "学区核查", "租房风险扫描", "伙伴家庭", "家庭连接机制", "幸运四叶草卡", "家庭旅程：发现与匹配", "家庭旅程：建立与传递", "执行蓝图", "西阿克顿小学：试点场景", "原型反思引入", "洞察与反思", "结束页"],
- future:["项目封面", "小米 SU7 与生态系统", "研究范围", "综合画像 Lin", "维修故事板", "情绪旅程", "研究归纳", "三个断点与四层响应", "服务系统", "支持激活", "数字伴侣系统", "工单与阶段触发", "内容生成与零件追踪", "更新接收与维修时间线", "3D 车间视图", "信息透明与用户价值", "生态产品体验", "产品借贷后台", "借出与归还旅程", "用户价值与商业价值", "社区互助出行", "互助积分机制", "路线与结算后台", "维修车主旅程", "帮助车主旅程", "双向价值", "记忆档案引入", "档案服务设计", "档案后台蓝图", "档案前台体验", "项目结语"]};
-export function pageImage(source:Source,page:number){if(source==='interior'&&page===16)return '/projects/interior/page-16-revised.png';return `/projects/${source==='ealing'?'ealing-v2':source==='future'?'su7-v2':source}/page-${String(page).padStart(2,'0')}.jpg`;}
+ future:["项目封面", "小米 SU7 与生态系统", "研究范围", "综合画像 Lin", "维修故事板", "情绪旅程", "研究归纳", "三个断点与四层响应", "服务系统", "支持激活", "数字伴侣系统", "工单与阶段触发", "内容生成与零件追踪", "更新接收与维修时间线", "3D 车间视图", "信息透明与用户价值", "生态产品体验", "产品借贷后台", "借出与归还旅程", "用户价值与商业价值", "社区互助出行", "互助积分机制", "路线与结算后台", "维修车主旅程", "帮助车主旅程", "双向价值", "记忆档案引入", "档案服务设计", "档案后台蓝图", "档案前台体验", "项目结语"],
+ smoke:['看不见的烟雾 · 项目封面','从现场互动，到离场后的理解','从日常情境到交互理解','从环保行为到污染感知','从行为调查到环境证据的收集','从行为数据到环境信息','从研究证据到体验问题','从研究洞察到设计机会','从多种可能到最终方向','从即时互动到连续体验','从概念到实体装置','从观众动作到系统响应','从一张纸条到可回看的信息','从烟雾形态到视觉系统','从原型到验证']};
+export function pageImage(source:Source,page:number){if(source==='interior'&&page===16)return '/projects/interior/page-16-revised.png';if(source==='smoke')return `/projects/invisible-smoke-v2/page-${String(page).padStart(2,'0')}.webp`;return `/projects/${source==='ealing'?'ealing-v2':source==='future'?'su7-v2':source}/page-${String(page).padStart(2,'0')}.jpg`;}
