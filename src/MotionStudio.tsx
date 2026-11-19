@@ -1,4 +1,5 @@
 import {useEffect,useRef,useState,type CSSProperties} from 'react';
+import {ProjectCover} from './VisualMedia';
 
 const motionAllowed=()=>document.documentElement.dataset.motion!=='reduced'&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -47,7 +48,7 @@ export function KineticTitle(){
 }
 
 export function StageImage({id,src,title}:{id:string;src:string;title:string}){
- return <div className="stage-scene" key={id}><img className="stage-image" src={src} alt={title+'设计成果'}/><div className="stage-shutters" aria-hidden="true">{Array.from({length:5},(_,i)=><span key={i} style={{'--slice':i} as CSSProperties}/>)}</div><div className="stage-crosshair" aria-hidden="true"><i/><i/></div></div>;
+ return <div className="stage-scene" key={id}><ProjectCover id={id} className="stage-image" src={src} alt={title+'设计成果'} sizes="(max-width:650px) calc(100vw - 40px), 50vw"/><div className="stage-shutters" aria-hidden="true">{Array.from({length:5},(_,i)=><span key={i} style={{'--slice':i} as CSSProperties}/>)}</div><div className="stage-crosshair" aria-hidden="true"><i/><i/></div></div>;
 }
 
 const sceneLabels=[['用户研究','洞察归纳','用户旅程'],['实体场所','数字入口','人员协作'],['TouchDesigner','Blender','AI 工具链']];
@@ -78,8 +79,8 @@ export function MotionAtmosphere(){
    if(magnet&&magnet!==next)magnet.style.removeProperty('translate');magnet=next;
    if(next){const box=next.getBoundingClientRect();next.style.translate=`${(event.clientX-box.left-box.width/2)*.14}px ${(event.clientY-box.top-box.height/2)*.2}px`;}
   };
-  window.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerleave',reset);window.addEventListener('hashchange',reset);window.addEventListener('blur',reset);
-  return()=>{cancelAnimationFrame(frame);reset();window.removeEventListener('pointermove',move);document.removeEventListener('pointerleave',reset);window.removeEventListener('hashchange',reset);window.removeEventListener('blur',reset);};
+  window.addEventListener('pointermove',move,{passive:true});document.addEventListener('pointerleave',reset);window.addEventListener('hashchange',reset);window.addEventListener('blur',reset);window.addEventListener('click',reset);
+  return()=>{cancelAnimationFrame(frame);reset();window.removeEventListener('pointermove',move);document.removeEventListener('pointerleave',reset);window.removeEventListener('hashchange',reset);window.removeEventListener('blur',reset);window.removeEventListener('click',reset);};
  },[]);
  useEffect(()=>{
   let frame=0;

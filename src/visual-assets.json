@@ -1,0 +1,224 @@
+{
+  "/projects/details/floating-overview.webp": {
+    "src": "/projects/details-hd/floating-overview.webp",
+    "width": 3600,
+    "height": 2229,
+    "srcSet": "/projects/details-hd/floating-overview-960.webp 960w, /projects/details-hd/floating-overview-1600.webp 1600w, /projects/details-hd/floating-overview.webp 3600w"
+  },
+  "/projects/details/floating-zoning.webp": {
+    "src": "/projects/details-hd/floating-zoning.webp",
+    "width": 1734,
+    "height": 927,
+    "srcSet": "/projects/details-hd/floating-zoning-960.webp 960w, /projects/details-hd/floating-zoning.webp 1734w"
+  },
+  "/projects/details/floating-app.webp": {
+    "src": "/projects/details-hd/floating-app.webp",
+    "width": 1752,
+    "height": 2970,
+    "srcSet": "/projects/details-hd/floating-app-960.webp 960w, /projects/details-hd/floating-app.webp 1752w"
+  },
+  "/projects/details/floating-view.webp": {
+    "src": "/projects/details-hd/floating-view.webp",
+    "width": 2769,
+    "height": 1599,
+    "srcSet": "/projects/details-hd/floating-view-960.webp 960w, /projects/details-hd/floating-view-1600.webp 1600w, /projects/details-hd/floating-view.webp 2769w"
+  },
+  "/projects/details/floating-fishing.webp": {
+    "src": "/projects/details-hd/floating-fishing.webp",
+    "width": 2769,
+    "height": 1059,
+    "srcSet": "/projects/details-hd/floating-fishing-960.webp 960w, /projects/details-hd/floating-fishing-1600.webp 1600w, /projects/details-hd/floating-fishing.webp 2769w"
+  },
+  "/projects/details/floating-dining.webp": {
+    "src": "/projects/details-hd/floating-dining.webp",
+    "width": 2592,
+    "height": 1932,
+    "srcSet": "/projects/details-hd/floating-dining-960.webp 960w, /projects/details-hd/floating-dining-1600.webp 1600w, /projects/details-hd/floating-dining.webp 2592w"
+  },
+  "/projects/details/floating-bedroom.webp": {
+    "src": "/projects/details-hd/floating-bedroom.webp",
+    "width": 1818,
+    "height": 1281,
+    "srcSet": "/projects/details-hd/floating-bedroom-960.webp 960w, /projects/details-hd/floating-bedroom.webp 1818w"
+  },
+  "/projects/details/floating-living.webp": {
+    "src": "/projects/details-hd/floating-living.webp",
+    "width": 1818,
+    "height": 1353,
+    "srcSet": "/projects/details-hd/floating-living-960.webp 960w, /projects/details-hd/floating-living.webp 1818w"
+  },
+  "/projects/details/floating-booking.webp": {
+    "src": "/projects/details-hd/floating-booking.webp",
+    "width": 1524,
+    "height": 720,
+    "srcSet": "/projects/details-hd/floating-booking-960.webp 960w, /projects/details-hd/floating-booking.webp 1524w"
+  },
+  "/projects/details/floating-consult.webp": {
+    "src": "/projects/details-hd/floating-consult.webp",
+    "width": 1050,
+    "height": 720,
+    "srcSet": "/projects/details-hd/floating-consult.webp 1050w"
+  },
+  "/projects/details/smoke-installation.webp": {
+    "src": "/projects/details-hd/smoke-installation.webp",
+    "width": 2499,
+    "height": 1353,
+    "srcSet": "/projects/details-hd/smoke-installation-960.webp 960w, /projects/details-hd/smoke-installation-1600.webp 1600w, /projects/details-hd/smoke-installation.webp 2499w"
+  },
+  "/projects/details/smoke-paper.webp": {
+    "src": "/projects/details-hd/smoke-paper.webp",
+    "width": 1878,
+    "height": 1362,
+    "srcSet": "/projects/details-hd/smoke-paper-960.webp 960w, /projects/details-hd/smoke-paper-1600.webp 1600w, /projects/details-hd/smoke-paper.webp 1878w"
+  },
+  "/projects/details/smoke-visuals.webp": {
+    "src": "/projects/details-hd/smoke-visuals.webp",
+    "width": 2235,
+    "height": 1116,
+    "srcSet": "/projects/details-hd/smoke-visuals-960.webp 960w, /projects/details-hd/smoke-visuals-1600.webp 1600w, /projects/details-hd/smoke-visuals.webp 2235w"
+  },
+  "/projects/details/ealing-cover.webp": {
+    "src": "/projects/details-hd/ealing-cover.webp",
+    "width": 2994,
+    "height": 2916,
+    "srcSet": "/projects/details-hd/ealing-cover-960.webp 960w, /projects/details-hd/ealing-cover-1600.webp 1600w, /projects/details-hd/ealing-cover.webp 2994w"
+  },
+  "/projects/details/su7-cover.webp": {
+    "src": "/projects/details-hd/su7-cover.webp",
+    "width": 1170,
+    "height": 735,
+    "srcSet": "/projects/details-hd/su7-cover-960.webp 960w, /projects/details-hd/su7-cover.webp 1170w"
+  },
+  "/projects/details/su7-workshop.webp": {
+    "src": "/projects/details-hd/su7-workshop.webp",
+    "width": 1410,
+    "height": 2250,
+    "srcSet": "/projects/details-hd/su7-workshop-960.webp 960w, /projects/details-hd/su7-workshop.webp 1410w"
+  },
+  "/projects/details/su7-persona.webp": {
+    "src": "/projects/details-hd/su7-persona.webp",
+    "width": 1350,
+    "height": 1785,
+    "srcSet": "/projects/details-hd/su7-persona-960.webp 960w, /projects/details-hd/su7-persona.webp 1350w"
+  },
+  "/projects/details/su7-journey-1.webp": {
+    "src": "/projects/details-hd/su7-journey-1.webp",
+    "width": 870,
+    "height": 1380,
+    "srcSet": "/projects/details-hd/su7-journey-1.webp 870w"
+  },
+  "/projects/details/su7-journey-2.webp": {
+    "src": "/projects/details-hd/su7-journey-2.webp",
+    "width": 870,
+    "height": 1380,
+    "srcSet": "/projects/details-hd/su7-journey-2.webp 870w"
+  },
+  "/projects/details/su7-journey-3.webp": {
+    "src": "/projects/details-hd/su7-journey-3.webp",
+    "width": 870,
+    "height": 1380,
+    "srcSet": "/projects/details-hd/su7-journey-3.webp 870w"
+  },
+  "/projects/details/su7-journey-4.webp": {
+    "src": "/projects/details-hd/su7-journey-4.webp",
+    "width": 870,
+    "height": 1380,
+    "srcSet": "/projects/details-hd/su7-journey-4.webp 870w"
+  },
+  "/projects/details/su7-journey-5.webp": {
+    "src": "/projects/details-hd/su7-journey-5.webp",
+    "width": 870,
+    "height": 1380,
+    "srcSet": "/projects/details-hd/su7-journey-5.webp 870w"
+  },
+  "/projects/details/ealing-p15-1.webp": {
+    "src": "/projects/details-hd/ealing-p15-1.webp",
+    "width": 1107,
+    "height": 2232,
+    "srcSet": "/projects/details-hd/ealing-p15-1-960.webp 960w, /projects/details-hd/ealing-p15-1.webp 1107w"
+  },
+  "/projects/details/ealing-p15-2.webp": {
+    "src": "/projects/details-hd/ealing-p15-2.webp",
+    "width": 1095,
+    "height": 2238,
+    "srcSet": "/projects/details-hd/ealing-p15-2.webp 1095w"
+  },
+  "/projects/details/ealing-p15-3.webp": {
+    "src": "/projects/details-hd/ealing-p15-3.webp",
+    "width": 1095,
+    "height": 2232,
+    "srcSet": "/projects/details-hd/ealing-p15-3.webp 1095w"
+  },
+  "/projects/details/ealing-p15-4.webp": {
+    "src": "/projects/details-hd/ealing-p15-4.webp",
+    "width": 1095,
+    "height": 2238,
+    "srcSet": "/projects/details-hd/ealing-p15-4.webp 1095w"
+  },
+  "/projects/details/ealing-p16-1.webp": {
+    "src": "/projects/details-hd/ealing-p16-1.webp",
+    "width": 1089,
+    "height": 2229,
+    "srcSet": "/projects/details-hd/ealing-p16-1.webp 1089w"
+  },
+  "/projects/details/ealing-p16-2.webp": {
+    "src": "/projects/details-hd/ealing-p16-2.webp",
+    "width": 1095,
+    "height": 2223,
+    "srcSet": "/projects/details-hd/ealing-p16-2.webp 1095w"
+  },
+  "/projects/details/ealing-p16-3.webp": {
+    "src": "/projects/details-hd/ealing-p16-3.webp",
+    "width": 1086,
+    "height": 2229,
+    "srcSet": "/projects/details-hd/ealing-p16-3.webp 1086w"
+  },
+  "/projects/details/ealing-p16-4.webp": {
+    "src": "/projects/details-hd/ealing-p16-4.webp",
+    "width": 1092,
+    "height": 2223,
+    "srcSet": "/projects/details-hd/ealing-p16-4.webp 1092w"
+  },
+  "/projects/details/ealing-p16-5.webp": {
+    "src": "/projects/details-hd/ealing-p16-5.webp",
+    "width": 1095,
+    "height": 2229,
+    "srcSet": "/projects/details-hd/ealing-p16-5.webp 1095w"
+  },
+  "/projects/details/smoke-p15-1.webp": {
+    "src": "/projects/details-hd/smoke-p15-1.webp",
+    "width": 1305,
+    "height": 2700,
+    "srcSet": "/projects/details-hd/smoke-p15-1-960.webp 960w, /projects/details-hd/smoke-p15-1.webp 1305w"
+  },
+  "/projects/details/smoke-p15-2.webp": {
+    "src": "/projects/details-hd/smoke-p15-2.webp",
+    "width": 1305,
+    "height": 2700,
+    "srcSet": "/projects/details-hd/smoke-p15-2-960.webp 960w, /projects/details-hd/smoke-p15-2.webp 1305w"
+  },
+  "/projects/details/smoke-p15-3.webp": {
+    "src": "/projects/details-hd/smoke-p15-3.webp",
+    "width": 1305,
+    "height": 2700,
+    "srcSet": "/projects/details-hd/smoke-p15-3-960.webp 960w, /projects/details-hd/smoke-p15-3.webp 1305w"
+  },
+  "/projects/details/smoke-p16-1.webp": {
+    "src": "/projects/details-hd/smoke-p16-1.webp",
+    "width": 1305,
+    "height": 2700,
+    "srcSet": "/projects/details-hd/smoke-p16-1-960.webp 960w, /projects/details-hd/smoke-p16-1.webp 1305w"
+  },
+  "/projects/details/smoke-p16-2.webp": {
+    "src": "/projects/details-hd/smoke-p16-2.webp",
+    "width": 1305,
+    "height": 2700,
+    "srcSet": "/projects/details-hd/smoke-p16-2-960.webp 960w, /projects/details-hd/smoke-p16-2.webp 1305w"
+  },
+  "/projects/details/smoke-p16-3.webp": {
+    "src": "/projects/details-hd/smoke-p16-3.webp",
+    "width": 1305,
+    "height": 2700,
+    "srcSet": "/projects/details-hd/smoke-p16-3-960.webp 960w, /projects/details-hd/smoke-p16-3.webp 1305w"
+  }
+}

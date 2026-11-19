@@ -45,6 +45,7 @@ for page, boxes in ealing_crops.items():
 for page in (15,16):
     for index,x in enumerate((370,1036,1700),1):
         jobs.append(('invisible-smoke-2026',page,f'smoke-p{page}-{index}',(x,150,x+435,1050)))
-for job in jobs:
-    crop(*job)
-print(f'Extracted {len(jobs)} independent visuals.')
+if __name__ == '__main__':
+    for job in jobs:
+        crop(*job)
+    print(f'Extracted {len(jobs)} independent visuals.')

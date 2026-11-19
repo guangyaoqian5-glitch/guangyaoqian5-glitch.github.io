@@ -4,7 +4,7 @@ import {Waves,Pause,Play} from 'lucide-react';
 export const projectArt:Record<string,string>={
  'floating-island':'/projects/details/floating-overview.webp',
  ealing:'/projects/details/ealing-cover.webp',
- 'grease-grace':'/projects/details/su7-workshop.webp',
+ 'grease-grace':'/projects/covers/su7-workshop-original.webp',
  'invisible-smoke':'/projects/details/smoke-installation.webp'
 };
 export const projectSignals:Record<string,{discipline:string;focus:string;chapters:string[]}>={
