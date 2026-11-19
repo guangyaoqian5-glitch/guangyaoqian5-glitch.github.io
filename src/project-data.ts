@@ -54,14 +54,14 @@ const ealingChapters:Chapter[]=[
  c(7,'journey','P07 · 用户旅程与机会点','沿旅程定位高压力节点与服务机会。','旅程把抵达、寻找住房、准备入学、进入社区等阶段串联起来，并标出信息断点、情绪变化与可介入机会。'),
  c(8,'stakeholders','P08 · 利益相关者与服务生态','明确家庭之外的责任关系。','学校、地方政府、社区组织、房屋相关服务与既有家庭共同影响安居体验。'),
  c(9,'definition','P09 · 问题定义与设计原则','先保证清晰、安全与可行动，再建立关系。','问题定义聚焦分散信息和缺少持续联系；设计原则强调可理解、可验证、低负担与安全的首次连接。'),
- c(10,'product-definition','P10 · 产品定义','以数字资源中心与伙伴家庭组成双层服务。','数字触点帮助完成住房与入学任务，伙伴家庭机制提供同伴经验和社区连接。'),
+ c(10,'product-definition','P10 · 产品定义','伊灵安居入学助手：住房与入学的决策辅助。','本版 MVP 包含住房与学校核对、申请材料准备、租赁疑点检查。家长匹配在本版范围之外。'),
  c(11,'requirements','P11 · 需求分析','把家庭、学校与服务方目标转化为产品需求。','需求覆盖信息获取、资格与流程理解、风险提醒、匹配、安全边界和异常恢复。'),
  c(12,'information-architecture','P12 · 信息架构','让住房、教育与伙伴支持保持清晰分层。','架构组织核心任务与入口，减少用户在不同机构信息之间往返拼接的负担。'),
  c(13,'user-flow','P13 · 用户流程','把关键任务拆成可执行步骤。','流程展示家庭如何进入住房、学校或伙伴家庭任务，并在信息缺失、匹配失败等情况下继续完成目标。'),
  c(14,'interaction-rules','P14 · 交互规则','为匹配、提醒与异常状态建立一致反馈。','页面定义关键条件、系统响应与下一步操作，避免把服务价值只停留在理想路径。'),
  c(15,'app-output-1','P15 · APP 产出','展示资源中心的核心任务界面。','原型呈现面向家庭的信息与行动入口，将复杂流程拆成可理解、可继续的页面。'),
- c(16,'app-output-2','P16 · APP 产出','展示伙伴家庭与社区连接界面。','页面继续呈现匹配、联系与任务支持，让线上信息与线下关系建立形成连续路径。'),
- c(17,'prototype-validation','P17 · 原型验证','用任务与反馈检查概念是否可理解。','验证聚焦用户是否理解入口、任务与伙伴机制，并记录阻碍、疑问和需要调整的内容。'),
+ c(16,'app-output-2','P16 · APP 产出','材料准备、租赁核对与帮助。','展示材料清单、条款输入、疑点说明与官方求助入口。'),
+ c(17,'prototype-validation','P17 · 原型验证','以模拟记录演练评估流程。','原稿包含 5 份合成记录；正式用户测试尚待执行，不将模拟结果作为实际可用性结论。'),
  c(18,'appendix','P18 · 附录','保留研究与方案的补充材料。','附录集中呈现来源、补充证据与项目边界，便于核对前文判断。')
 ];
 
@@ -101,7 +101,7 @@ const su7Chapters:Chapter[]=su7Meta.map((x,i)=>c(i+1,x[0],x[1],x[2],x[3]));
 
 export const projects:Project[]=[
  {id:'floating-island',title:'浮岛',en:'Floating Island',category:'service',subtitle:'退役钻井平台的文旅服务再生',description:'把海上工业遗产转化为海钓、住宿与餐饮结合的体验，并用线上服务连接线下空间。',source:'floating2026',cover:'/projects/floating-island-2026/page-01.webp',tags:['可持续设计','空间服务','数字触点'],context:'山东东营 · 空间与服务概念改造',note:'按最新作品集 P.17—P.24 逐页展示，共 8 页。',chapters:floatingChapters},
- {id:'ealing',title:'Settle into Ealing',en:'A Collaborative Ecosystem',category:'service',subtitle:'新移民家庭的安居与社区融入',description:'连接住房、学校与社区支持，让新抵达家庭更安全地安顿下来，并建立归属感。',source:'ealing2026',cover:'/projects/ealing-2026/page-01.webp',tags:['公共服务','用户研究','服务生态'],context:'Team 31 · 团队服务设计项目',credits:'Guangyao Qian · Jiayi Lin · Lele Shi · Soohyun Kim',note:'按最新作品集 P.25—P.42 逐页展示，共 18 页；团队分工以原稿为准。',chapters:ealingChapters},
+ {id:'ealing',title:'Settle into Ealing',en:'Settling-in & School Support',category:'service',subtitle:'伊灵安居入学助手',description:'帮助新迁入伊灵的有孩家庭，在住房、学校申请与租赁事务中获得清晰、可靠且可执行的支持。',source:'ealing2026',cover:'/projects/ealing-2026/page-01.webp',tags:['公共服务','用户研究','决策支持'],context:'团队服务设计项目 · 数字产品深化',credits:'Guangyao Qian · Jiayi Lin · Lele Shi · Soohyun Kim',note:'依据最新作品集 P.25—P.42。',chapters:ealingChapters},
  {id:'grease-grace',title:'Grease & Grace',en:'When Trust Returns',category:'service',subtitle:'小米 SU7 碰撞维修服务体验',description:'围绕维修期间的信息、出行与信任问题，把前台体验与后台协作连接为持续服务。',source:'su72026',cover:'/projects/su7-2026/page-01.webp',tags:['汽车售后','服务系统','数字原型'],context:'小米 SU7 · 碰撞维修服务设计',note:'按最新作品集 P.43—P.72 逐页展示，共 30 页；方案不等同于已上线服务。',chapters:su7Chapters},
  {id:'invisible-smoke',title:'看不见的烟雾',en:'Invisible Clouds',category:'interaction',subtitle:'环境污染互动装置与信息产品',description:'以寺庙焚香与夜市烧烤为入口，让烟雾、污染信息与研究来源变得可参与、可理解、可追溯。',source:'smoke2026',cover:'/projects/invisible-smoke-2026/page-01.webp',tags:['互动装置','信息设计','移动端原型'],context:'互动装置与数字产品设计',note:'按最新作品集 P.01—P.16 逐页展示，共 16 页；文献数据、原型反馈与现场测量严格区分。',chapters:smokeChapters}
 ];
