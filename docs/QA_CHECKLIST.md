@@ -7,7 +7,8 @@
 - [x] 四项目切换与内容计数保留；390px首页、能力及案例在转场结束后均无横向溢出。
 - [x] 手机目录搜索、聚焦阅读通过，浏览器无error/warn；原生转场路径已验证。
 - [ ] 不支持原生View Transition浏览器的遮罩降级分支尚未在实机验证。
-- [ ] 生产构建、内容不变检查与正式部署核验。
+- [x] TypeScript、Vite构建及291模块审计通过；项目JSON和project-data与前版逐字节一致。
+- [x] 阿里云release 20261120-motion已上线，Nginx检查通过；JS index-Bsp9Mb2a.js/CSS index-BIB_wq65.css均HTTPS 200，正式页能力切换与动效元素已核验，无error/warn。
 - [ ] 用户验收指针响应、滚动与切换的视觉手感。
 
 ## 2026-11-19 全站视觉与交互升级
