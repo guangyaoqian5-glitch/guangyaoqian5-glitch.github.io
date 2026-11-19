@@ -5,6 +5,7 @@ import smoke from './content/smoke.json';
 import ealing from './content/ealing.json';
 import su7 from './content/su7.json';
 import './case-blocks.css';
+import visualDimensions from './visual-dimensions.json';
 
 type Item={title:string;text:string;eyebrow?:string};
 export type Block=
@@ -30,10 +31,11 @@ function Journey({block}:{block:Extract<Block,{type:'cards'|'flow'}>}){
  return <ol className="case-flow">{block.items.map((item,i)=><li key={i} className={i===active?'is-current':''}><button onClick={()=>setActive(i)} aria-pressed={i===active}><span className="flow-marker">{i===active?<Check size={17}/>:<span/>}</span><strong>{item.title}</strong></button><p>{item.text}</p></li>)}</ol>;
 }
 function Visual({src,title,caption,onOpen}:{src:string;title:string;caption?:string;onOpen:(src:string,title:string)=>void}){
- return <figure className="case-visual"><button aria-label={'放大'+title} onClick={()=>onOpen(src,title)}><img src={src} alt={title} loading="lazy"/><span><Maximize2 size={17}/>查看细节</span></button>{caption&&<figcaption>{caption}</figcaption>}</figure>;
+ const size=visualDimensions[src as keyof typeof visualDimensions];
+ return <figure className="case-visual"><button aria-label={'放大'+title} onClick={()=>onOpen(src,title)}><img src={src} alt={title} loading="lazy" width={size?.[0]} height={size?.[1]}/><span><Maximize2 size={17}/>查看细节</span></button>{caption&&<figcaption>{caption}</figcaption>}</figure>;
 }
 export function CaseBlocks({project,chapter,onOpen}:{project:string;chapter:string;onOpen:(src:string,title:string)=>void}){
- return <div className="case-modules">{getBlocks(project,chapter).map((block,index)=><section className={'case-module module-'+block.type} key={index} data-block-type={block.type} aria-label={block.title}>
+ return <div className="case-modules">{getBlocks(project,chapter).map((block,index)=><section className={'case-module module-'+block.type+(/核心|洞察|结论|关键|设计原则|设计机会/.test(block.title)?' is-key-module':'')} key={index} data-block-type={block.type} aria-label={block.title}>
  <h3 className="module-heading">{block.type==='note'&&<Info size={16}/>}<span>{block.title}</span></h3>
  {block.type==='cards'&&<div className="case-cards">{block.items.map((item,i)=>{const Icon=icons[i%icons.length];return <article key={i}><div className="card-symbol"><Icon size={22}/>{item.eyebrow&&<span>{item.eyebrow}</span>}</div><h4>{item.title}</h4><p>{item.text}</p></article>;})}</div>}
  {block.type==='flow'&&<Journey block={block}/>}
